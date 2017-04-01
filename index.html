@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" class=" js no-touch csstransitions" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Ilija Ilievski - Deep Learning, Natural Language Processing, Visual Question Answering, Singapore </title>
+        <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="google-site-verification" content="tXGinevmz43rJKRTfCj6v5f8zN91tcmg6fdrrYUn-gI" />
+        <meta name="description" content="Ilija is a Ph.D. student at NUS, doing interdisciplinary research in the intersection of vision and language. He believes question answering over multimodal data is the next frontier of deep learning, so his research focuse is on Visual Question Answering. As a side project, he created deeplearningtutorials.com. A place to share his experience developing deep learning methods for real-world problems, in a hope to clear up the &ldquo;dark magic&rdquo; surrounding the development and application of deep learning models to novel problems. He also worked on developing surrogate optimization methods for hyperparameter optimization of deep learning methods. Previously he obtained an M.Eng. in Software Engineering for Machine Learning, by developing an intelligent tool for Urban Data Modeling and Simulation.">
+        <meta name="keywords" content="ilija ilievski, deep learning, deep neural networks, vision, visual question answering, vqa, machine learning, natural language processing, natural language generation, bayesian optimization, surrogate optimization, nus, ngs, singapore">
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/perfect-scrollbar-0.4.5.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/academicons.min.css">
+        <link rel="stylesheet" href="css/style.css?v6">
+        <script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+        <script type="text/javascript" src="./js/modernizr.custom.63321.js"></script>
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/perfect-scrollbar-0.4.5.with-mousewheel.min.js"></script>
+        <script type="text/javascript" src="./js/custom.js"></script>
+        <!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+        mixpanel.init("8605c226c97d440acb2c505d02c16eca");</script><!-- end Mixpanel -->
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <a class="mobilemenu"><i class="fa fa-bars"></i></a>
+
+            <div id="sidebar">
+                <div id="main-nav" class="ps-container">
+                    <div id="nav-container">
+                        <div id="profile" class="clearfix">
+                            <div class="portrait hidden-xs"></div>
+                            <div class="title">
+                                <h2>Ilija Ilievski</h2>
+                                <h3>National University of Singapore</h3>
+                            </div>
+                            
+                        </div>
+                        <ul id="navigation">
+                            <li class="currentmenu">
+                              <a href="#biography">
+                                  <div class="icon"><i class="fa fa-user"></i></div>
+                                <div class="text">About Me</div>
+                              </a>
+                            </li>  
+                            <li class="external blog">
+                              <a target="_blank"  href="http://deeplearningtutorials.com/">
+                                  <div class="icon"><i class="fa fa-graduation-cap"></i></div>
+                                  <div class="text">Deep Learning Tutorials</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#education">
+                                <div class="icon"><i class="fa fa-university"></i></div>
+                                <div class="text">Education</div>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="#work">
+                                <div class="icon"><i class="fa fa-suitcase"></i></div>
+                                <div class="text">Work Experience</div>
+                              </a>
+                            </li>
+
+                            <li>
+                                <a href="#publications">
+                                    <div class="icon"><i class="fa fa-book"></i></div>
+                                    <div class="text">Publications</div>
+                                </a>
+                            </li>
+
+                            <li>
+                              <a href="#contact">
+                                  <div class="icon"><i class="fa fa-envelope"></i></div>
+                                  <div class="text">Contact</div>
+                              </a>
+                            </li>
+
+                            <li class="external CV">
+                              <a target="_blank"  href="pub/Ilija_Ilievski_Nov_16_CV.pdf">
+                                  <div class="icon"><i class="fa fa-download"></i></div>
+                                  <div class="text">Download CV</div>
+                              </a>
+                            </li>
+                            <li class="external">
+                              <a target="_blank"  
+href="http://ilija139.github.io/dnn">
+                                  <div class="icon"><i class="fa fa-file-pdf-o"></i></div>
+                                  <div class="text">DNN Reading group</div>
+                              </a>
+                            </li>
+                        </ul>
+                    </div>        
+                </div>
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="https://github.com/ilija139" target="_blank"><i class="fa fa-github"></i></a></li>
+                            <li><a href="http://www.linkedin.com/in/ilija139" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://scholar.google.com.sg/citations?user=J7NRFGMAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar"></i></a></li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div id="main">
+            
+                <div class="page home" data-pos="home">
+                    <div id="biography"  class="pageheader">
+                        <div class="headercontent">
+                            <div class="section-container">
+                                
+                                <div class="row">
+                                    <div class="col-sm-2 visible-sm"></div>
+                                    <div class="col-sm-8 col-md-5">
+                                        <div class="biothumb">
+                                            <img alt="Ilija Ilievski, deep learning student" title="Ilija Ilievski, deep learning student" src="images/Ilija_Ilievski.jpg" class="img-responsive">
+                                            <div class="overlay">
+                                                
+                                                <h1 class="">Ilija Ilievski</h1>
+                                                <ul class="list-unstyled">
+                                                    <li>Graduate School for Integrative Sciences and Engineering</li>
+                                                    <li>National University of Singapore</li>
+                                                </ul>
+                                            </div> 
+                                            
+                                               
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="clearfix visible-sm visible-xs"></div>
+                                    <div  class="col-sm-12 col-md-7">
+                                        <h3  class="title">Bio
+                                         <i class="quote">"Ars longa, vita brevis"</i></h3>
+
+                                            <p>PhD candidate at NUS, under the supervision of
+                                                <a href="https://sites.google.com/site/jshfeng/" target="_blank">Jiashi Feng</a>
+                                                and <a href="https://www.ece.nus.edu.sg/stfpage/eleyans/" target="_blank">Shuicheng Yan</a>,
+                                                generously supported by an <a href="http://www.nus.edu.sg/ngs/" target="_blank">NGS</a> Scholarship.
+                                                Working on developing deep neural network models for complete image understanding, applied to Visual Question Answering (VQA).
+
+                                            </p>
+                                            <p> From Nov 2014 to Nov 2015, was doing research in NLP and IR area at <a href="http://wing.comp.nus.edu.sg/" target="_blank">WING</a> and <a href="http://www.comp.nus.edu.sg/~nlp/" target="_blank">NLP</a> labs.
+                                            </p>
+                                            <p>
+                                                Has an M.Eng. degree in Software Engineering for Machine Learning with a thesis titled "Intelligent Tool for Modelling and Simulation of Urban Development".
+                                            </p>
+                                            <p><b>Research interests:</b> Deep Learning, Reinforcement Learning, Non-convex Optimization</p>
+                                            <p><b>Past interests:</b> VQA, NLP, Recommender Systems, Urban Modelling and Simulation, Software Design Patterns</p>
+                                            <p><b style="color: red;">Latest: </b>
+                                                <div><b>27 Apr 2017  &mdash;</b> I will present our work on applying deep learning solutions to problems in quantitative finance  at <a href="https://www.re-work.co/events/deep-learning-in-finance-summit-singapore-2017">RE•WORK Deep Learning Finance Summit Singapore</a>.</div>
+                                            <div><b>07 Feb 2017  &mdash;</b> I presented "Efficient Hyperparameter Optimization of Deep Learning Algorithms Using Deterministic RBF Surrogates" at <a href="http://www.aaai.org/Conferences/AAAI/aaai17.php">AAAI-17</a>. You can download the poster from <a href="pub/aaai-17_poster.pdf">here</a>.</div>
+                                                <div><b>20 Oct 2016  &mdash;</b> I gave a talk at <a href="https://www.re-work.co/events/deep-learning-singapore">RE•WORK Deep Learning Summit Asia</a>, presenting our work on the Visual Question Answering problem.</div>
+                                                <div><b>04 Oct 2016  &mdash;</b> I presented our group's work  at <a href="http://www.gputechconf.com.au/agenda.html">NVIDIA GTCx Australia Conference</a> in Melbourne.</div>
+                                                <div><b>05 Sep 2016  &mdash;</b> I did a short interview for RE•WORK, you can find it <a href="https://www.re-work.co/blog/deep-learning-ilija-ilievski-national-university-singapore-visual-question-answering" target="_blank">here</a>.</div> 
+                                            </p>
+                                            <p><b>Other: </b>cycling, Ⓥ food and nutrition</p>
+                                            <p><b>Email: </b><a href="mailto:ilija.ilievski@u.nus.edu">ilija.ilievski@u.nus.edu</a></p>
+                                            <p><b>Schedule: </b><a href="https://goo.gl/aZMmYS">goo.gl/aZMmYS</a> (Read <a href="http://www.paulgraham.com/makersschedule.html">this</a> first)</p>
+                                            <p><b>PS: </b> My first name is Ilija (Илија) and it's pronounced similar to Ilya <a href="https://goo.gl/vjKZRC" target="_blank">(listen)</a>.</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+
+                    <div class="pagecontents">
+                        <div class="section color-1">
+                            <div class="section-container">
+                                <div class="row">
+                                    <div id="education" class="col-md-5 col-md-offset-1">
+                                        <div class="title text-center">
+                                            <h3>Education</h3>
+                                            <i class="quote">"Per aspera ad astra"</i>
+                                        </div>
+                                        <ul class="ul-card">
+                                            <li>
+                                                <div class="dy">
+                                                    <span class="degree">Ph.D.</span>
+                                                    <span class="year">2015 - 2018</span>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Deep Learning, Computer Engineering</p>
+                                                    <p class="where">National University of Singapore</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dy">
+                                                    <span class="degree">Ph.D.</span>
+                                                    <span class="year">2014 - 2015</span>
+                                                </div>
+                                                <div class="description">
+                                                    <p>NLP & IR, Computer Science</p>
+                                                    <p class="where">National University of Singapore</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dy">
+                                                    <span class="degree">M.Eng.</span>
+                                                    <span class="year">2011 - 2013</span>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Software Engineering for ML</p>
+                                                    <p class="where">Ss. Cyril and Methodius University</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dy">
+                                                    <span class="degree">B.Sc.</span><span class="year">2006 - 2010</span>
+                                                </div>
+                                                <div class="description">
+                                                    <p >Computer Engineering</p>
+                                                    <p class="where">Ss. Cyril and Methodius University</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="work" class="col-md-5">
+                                        <div class="title text-center">
+                                            <h3>Work Experience</h3>
+                                            <i class="quote">&nbsp;</i>
+                                        </div>
+                                        <ul class="ul-card">
+                                            <li>
+                                                <div class="dy">
+                                                    <span class="year">2015 - 2016</span>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Teaching Assistant</p>
+                                                    <p class="where">NUS Modules: <a href="http://www.comp.nus.edu.sg/~cs1101s/" target="_blank">CS1101S</a> and <a href="http://www.comp.nus.edu.sg/~stevenha/cs3226.html" target="_blank">CS3226</a> - <a href="pub/student-feedback.pdf">Feedback</a></p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dy">
+                                                    <span class="year">2010 - 2014</span>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Software Engineer</p>
+                                                    <p class="where">Freelancer: Web, Mobile, Server</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dy">
+                                                    <span class="year">Jun - Sep 2013</span>
+                                                </div>
+                                                <div class="description">
+                                                    <p>Research Assistant Intern</p>
+                                                    <p class="where">Institute for Infocomm Research, A*STAR</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dy">
+                                                    <span class="year">Jun - Sep 2009 </span>
+                                                </div>
+                                                <div class="description">
+                                                    <p >Software Engineer Intern</p>
+                                                    <p class="where">Netcetera, AG</p>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>    
+                            </div>
+                                
+                        </div>
+
+                        <div class="section color-2">
+                            <div class="section-container">
+                                <div class="row">
+                                    <div id="publications" class="col-md-10 col-md-offset-1">
+                                        <div class="title text-center">
+                                            <h3>Publications</h3>
+                                        </div>
+                                        <ul class="timeline">
+                                            <li class="open">
+                                                <div class="date">2017</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject" style="padding-left: 0px;">Efficient Hyperparameter Optimization of Deep Learning Algorithms Using Deterministic RBF Surrogates</div>
+                                                    <div class="text row">
+                                                        <div class="col-md-11">
+Automatically searching for optimal hyperparameter configurations  is of crucial importance for applying deep learning algorithms in practice.  Recently, Bayesian optimization has been  proposed for optimizing hyperparameters of various machine learning algorithms.  Those methods adopt probabilistic surrogate models like Gaussian processes to approximate and minimize the validation error  function of hyperparameter values.  However, probabilistic surrogates require accurate  estimates of sufficient statistics (e.g., covariance) of the error distribution and thus need many function evaluations with a sizeable number of hyperparameters.  This makes them inefficient  for optimizing hyperparameters  of deep learning algorithms, which are highly  expensive to evaluate.  In this work, we propose a new deterministic and efficient hyperparameter optimization method that employs  radial basis functions as error   surrogates.  The proposed mixed integer algorithm, called HORD,  searches the surrogate for the most promising hyperparameter values through dynamic coordinate search and requires many fewer function evaluations.  HORD does well in low dimensions but it is exceptionally better in higher dimensions.  Extensive evaluations on MNIST and CIFAR-10 for four deep neural networks demonstrate HORD significantly outperforms the well-established Bayesian optimization methods such as GP, SMAC, and TPE.  For instance, on average, HORD is more than  6  times faster than GP-EI in obtaining the  best configuration of 19 hyperparameters.
+                                                            <p><b>Ilija Ilievski</b>, Taimoor Akhtar, Jiashi Feng, and Christine Annette Shoemaker </p>
+                                                            <p>AAAI-17&nbsp;<a target="_blank" href="pub/aaai-17.pdf">PDF</a> <a target="_blank" href="pub/aaai-17-sup.pdf">Supplement</a> <a target="_blank" href="pub/aaai-17_poster.pdf">Poster</a> <a target="_blank" href="https://github.com/ilija139/HORD">Code</a> <a target="_blank" href="pub/aaai-17.bib">BibTeX</a> </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="date">2016</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject" style="padding-left: 0px;">Hyperparameter Transfer Learning through Surrogate Alignment for Efficient Deep Neural Network Training</div>
+                                                    <div class="text row">
+                                                        <div class="col-md-11">
+Recently, several optimization methods have been successfully applied to the hyperparameter optimization of deep neural networks (DNNs). The methods work by modeling the joint distribution of hyperparameter values and corresponding error. Those methods become less practical when applied to modern DNNs whose training may take a few days and thus one cannot collect sufficient observations to accurately model the distribution. To address this challenging issue, we propose a method that learns to transfer optimal hyperparameter values for a small source dataset to hyperparameter values with comparable performance on a dataset of interest. As opposed to existing transfer learning methods, our proposed method does not use hand-designed features. Instead, it uses surrogates to model the hyperparameter-error distributions of the two datasets and trains a neural network to learn the transfer function. Extensive experiments on three CV benchmark datasets clearly demonstrate the efficiency of our method.
+                                                            <p><b>Ilija Ilievski</b> and Jiashi Feng</p>
+                                                            <p><a target="_blank" href="http://arxiv.org/pdf/1608.00218v1">PDF</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="date">2016</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject" style="padding-left: 0px;">A Focused Dynamic Attention Model for Visual Question Answering</div>
+                                                    <div class="text row ">
+                                                        <div class="col-md-11">
+Visual Question and Answering (VQA) problems are attracting increasing interest from multiple research disciplines. Solving VQA problems require techniques from both computer vision for understanding the visual contents of a presented image or video, as well as the ones from natural language processing for understanding the semantics of the question and generating the answers. Regarding visual content modeling, most of existing VQA methods adopt the strategy of extracting global features from the image or video, which inevitably fails in capturing fine-grained information such as the spatial configuration of multiple objects. Extracting features from auto-generated regions &#8212; as some region-based image recognition methods do &#8212; cannot essentially address this problem and may introduce some overwhelming irrelevant features with the question. In this work, we propose a novel Focused Dynamic Attention (FDA) model to provide better-aligned image content representation with proposed questions. Being aware of the key words in the question, FDA employs off-the-shelf object detector to identify important regions and fuse the information from the regions and global features via an LSTM unit. Such question-driven representations are then combined with question representation and fed into a reasoning unit for generating the answers. Extensive evaluation on a large-scale benchmark dataset, VQA, clearly demonstrates the superior performance of FDA over well-established baselines.
+                                                            <p><b>Ilija Ilievski</b>, Shuicheng Yan and Jiashi Feng</p>
+                                                            <p><a target="_blank" href="pub/ilievski2016vqa.pdf">PDF</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="pub/ilievski2016vqa.bib" target="_blank">BibTeX</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="date">2014</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject" style="padding-left: 0px;">Intelligent Tool for Modelling and Simulation of Urban Development</div>
+                                                    <div class="text row ">
+                                                        <div class="col-md-11">
+                                                            This master thesis presents a tool that employs intelligent technologies to capture the patterns of urban change driven by a diverse set of context factors. Data mining provides opportunities, which complement and extend the knowledge previously obtained with other approaches. A series of exploratory case studies were done to showcase the modeling and predictive capabilities of the tool. A number of simulations have revealed distinctive local patterns of urban change in the city of Skopje, shaped by local urban spatial and institutional structures. This thesis shows the importance of intelligent technologies in the interpretation of the historical evidence of urban development.
+                                                            <p><b>Ilija Ilievski</b>, Master Thesis, Ss. Cyril & Methodius University, Macedonia.</p>
+                                                            <p><a target="_blank" href="pub/Ilija_Ilievski_Master_Thesis_14.pdf">PDF (in Macedonian)</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                                    
+                                            <li>
+                                                <div class="date">2013</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject" style="padding-left: 0px;">Personalized News Recommendation Based On Implicit Feedback</div>
+                                                    <div class="text row ">
+                                                        <div class="col-md-11">
+                                                            This paper presents a personalized news recommendation system that combines effective ways of understanding new articles with novel ways of modeling evolving user interest profiles to deliver relevant news articles to a user. A news article is represented as a taxonomy of hierarchical abstractions that capture different semantic facets of the news story. A user's interest profile is modeled as an evolving interest over these facets. User's interest in individual articles is determined using a novel SWL (select-watch-leave) interest modeling framework that leverages on a detailed analysis of his usage history. Initial performance comparisons with state-of-the-art personalized ranking approaches are promising.
+                                                            <p><b>Ilija Ilievski</b> and Sujoy Roy, ACM RecSys.</p>
+                                                            <p><a target="_blank" href="pub/ilievski2013personalized.pdf">PDF</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a 
+href="pub/ilievski2013personalized.bib" target="_blank">BibTeX</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="date">2013</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject" style="padding-left: 0px;">Discovering Patterns of Urban Development</div>
+                                                    <div class="text row">
+                                                        <div class="col-md-11">
+                                                            The goal of this research is to develop a tool that employs intelligent technologies to capture the patterns of urban change driven by a diverse set of context factors. Data mining provides opportunities, which complement and extend the knowledge previously obtained with other approaches. A series of exploratory case studies are in place to investigate the modeling and predictive capabilities of the tool. A number of simulations have revealed distinctive local patterns of urban change in the city of Skopje, shaped by local urban spatial and institutional structures. This study shows the importance of intelligent technologies in the interpretation of the historical evidence of urban development.
+                                                            <p><b>Ilija Ilievski</b>, Sonja Gievska and Ognen Marina, ICT Innovations. </p>
+                                                            <p><a target="_blank" href="pub/ilievski2013discovering.pdf">PDF</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a 
+href="pub/ilievski2013discovering.bib" target="_blank">BibTex</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="date">2013</div>
+                                                <div class="circle"></div>
+                                                <div class="data">
+                                                    <div class="subject">Discovering Patterns of Urban Development in Skopje</div>
+                                                    <div class="text row">
+                                                        <div class="col-md-11">
+                                                            This research attempts to test a series of hypotheses on how the mechanisms of social and economic stratification have manifested in urban space and whether population dynamics has reconfigured the spatiality of the city landscape. This paper reflects upon the challenges surrounding the efforts in recognizing and interpreting the patterns of urban change. Our efforts are directed towards correlating real-word emergent patterns of urban change to contextual knowledge and incorporating them into model's predicting capabilities. Suitability of an extensive set of machine learning algorithms for simulation and prediction of urban development is investigated. Our long-term goal has been to lay out a foundation in terms of a knowledge base and a tool that will accommodate future exploration of different research scenarios related to urban dynamics. The specific goal of this research is to develop a tool that employs intelligent technologies to capture the patterns of urban change driven by a diverse set of context factors. Data mining provides opportunities, which complement and extend the knowledge previously obtained with other approaches.
+                                                            <p>Sonja Gievska, Ognen Marina and <b>Ilija Ilievski</b>, 9th Congress "Virtual City and Territory". </p>
+                                                            <p><a 
+target="_blank" href="pub/ilievski2013Adiscovering.pdf">PDF</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a 
+href="pub/ilievski2013Adiscovering.bib" target="_blank">BibTex</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagecontents">
+                            <div class="section color-1">
+                                <div class="section-container">
+                                    <div id="contact" class="row">
+                                        <div  class="col-md-10 col-md-offset-1">
+                                            <div class="title text-center">
+                                                <h3>Contact</h3>
+                                            </div>
+                                            <p><b>Email</b>: <a href="mailto:ilija.ilievski@u.nus.edu">ilija.ilievski@u.nus.edu</a></p>
+                                            <p><b>Address</b>: Vision and Machine Learning Lab, E4-#08-27, 4 Engineering Drive 3, National University of Singapore, Singapore 117583 </p>
+<p style="margin-top:25px;font-size:smaller;text-align:center">Modified: 15 February 2017</p>
+ </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                    </div>
+                </div>
+        </div>
+</div>        </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-55717130-1', 'auto');
+  ga('send', 'pageview', {
+ 'page': location.pathname + location.search  + location.hash
+});
+</script>
+<script type="text/javascript">
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var n=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(n?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var r=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=r(p[c])};
+  heap.load("3901291362");
+</script>
+<script>
+  mixpanel.track("Page ilija139.github.io load");
+</script>
+</body>
+</html>
