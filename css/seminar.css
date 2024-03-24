@@ -1,0 +1,106 @@
+
+.table-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}
+
+table {
+    margin: 0 0 2em 0;
+    width: 100%;
+    text-align: center;
+}
+
+    table tbody tr {
+        border: solid 1px #e5e5e5;
+        border-left: 0;
+        border-right: 0;
+    }
+
+        table tbody tr:nth-child(2n + 1) {
+            background-color: #f8f8f8;
+        }
+
+    table td {
+        padding: 0.75em 0.75em;
+        vertical-align: middle;
+    }
+
+    table.table > tbody > tr > td {
+        padding: 0.75em 0.75em;
+        vertical-align: middle;
+    }
+
+    /* section.container {
+        width: 60em;
+    } */
+
+    table td {
+        padding: 0.75em 0.75em;
+        vertical-align: middle;
+    }
+
+    table span {
+        color: #7f0000;
+    }
+
+    table th {
+        color: #646464;
+        font-size: 0.9em;
+        font-weight: 300;
+        padding: 0 0.75em 0.75em 0.75em;
+        text-align: left;
+    }
+
+    table thead {
+        border-bottom: solid 2px #e5e5e5;
+    }
+
+        table thead th {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        table thead th.date {
+            /* width: 10%; */
+            width: 10%;
+        }
+
+        table thead th.presenter {
+            /* width: 20%; */
+            width: 15%;
+        }
+
+        table thead th.affiliation {
+            /* width: 10%; */
+            width: 8%;
+        }
+        
+    table tfoot {
+        border-top: solid 2px #e5e5e5;
+    }
+
+    table.alt {
+        border-collapse: separate;
+    }
+
+        table.alt tbody tr td {
+            border: solid 1px #e5e5e5;
+            border-left-width: 0;
+            border-top-width: 0;
+        }
+
+            table.alt tbody tr td:first-child {
+                border-left-width: 1px;
+            }
+
+        table.alt tbody tr:first-child td {
+            border-top-width: 1px;
+        }
+
+        table.alt thead {
+            border-bottom: 0;
+        }
+
+        table.alt tfoot {
+            border-top: 0;
+        }
