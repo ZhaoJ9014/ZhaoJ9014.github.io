@@ -74,6 +74,17 @@ table {
             /* width: 10%; */
             width: 8%;
         }
+
+        table thead th.paper/topic {
+            /* width: 10%; */
+            width: 8%;
+        }
+
+         table thead th.venue {
+            /* width: 10%; */
+            width: 8%;
+        }
+
         
     table tfoot {
         border-top: solid 2px #e5e5e5;
